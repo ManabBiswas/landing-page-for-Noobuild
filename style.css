@@ -2,3 +2,60 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 25px;
+    color: black; 
+}
+
+body.theme-default {
+    background: white; /* Default background color */
+    color: black; /* Default text color */
+}
+
+body.theme-blue {
+    background: linear-gradient(to top right, #223651, #137DC5);
+    color: white;
+}
+
+body.theme-purple {
+    background: linear-gradient(to top right, #230344, #FF5F6D);
+    color: white; 
+}
+
+body.theme-dark {
+    background: black; 
+    color: white; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    padding: 2px;
+    margin-bottom: 1em;
+}
+
+.spacer {
+    flex: 1; /* Takes up remaining space */
+}
+
+.theme-btn button {
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 40px;
+    background-color: transparent;
+    border: 1px double;
+}
+.menu-btn button {
+    padding: 10px 20px;
+    margin-right: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 1px double;
+}
