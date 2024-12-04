@@ -1,17 +1,19 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
+    line-height: 1.6;
     padding: 25px;
-    color: black; 
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body.theme-default {
-    background: white; /* Default background color */
-    color: black; /* Default text color */
+    background: white;
+    color: black; 
 }
 
 body.theme-blue {
@@ -31,7 +33,7 @@ body.theme-dark {
 
 header {
     display: flex;
-    justify-content: space-between; /* Space between items */
+     justify-content: space-between; /* Space between items */
     align-items: center; /* Center items vertically */
     padding: 2px;
     margin-bottom: 1em;
@@ -41,21 +43,48 @@ header {
     flex: 1; /* Takes up remaining space */
 }
 
-.theme-btn button {
+.theme-btn button, .menu-btn button {
     padding: 10px 20px;
     margin: 5px;
     cursor: pointer;
-    border: none;
+    border: 1px double;
     border-radius: 40px;
     background-color: transparent;
-    border: 1px double;
+    transition: all 0.3s ease;
 }
-.menu-btn button {
-    padding: 10px 20px;
-    margin-right: 5px;
-    cursor: pointer;
-    border: none;
-    border-radius: 10px;
-    background-color: transparent;
-    border: 1px double;
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+h1, h2 {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border-top: 1px solid white;
+}
+
+@media (max-width: 600px) {
+    /* header {
+        flex-direction: column;
+    } */
+
+    .spacer {
+        display: none;
+    }
 }
