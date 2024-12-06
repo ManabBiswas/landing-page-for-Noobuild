@@ -3,12 +3,14 @@ let currentTheme = 'default';
 function toggleTheme() {
     const body = document.body;
     const buttons = document.querySelectorAll('.theme-btn button, .menu-btn button');
+    const menuBtnSpans = document.querySelectorAll('.menu-btn span');
+    const navLinks = document.querySelectorAll('nav ul li a');
 
     const themes = [
-        { name: 'default', class: 'theme-default', buttonColor: 'black' },
-        { name: 'blue', class: 'theme-blue', buttonColor: 'white' },
-        { name: 'purple', class: 'theme-purple', buttonColor: 'white' },
-        { name: 'dark', class: 'theme-dark', buttonColor: 'white' }
+        { name: 'default', class: 'theme-default', buttonColor: 'black', menuBtnColor: 'black', navLinkColor: 'black' },
+        { name: 'blue', class: 'theme-blue', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' },
+        { name: 'purple', class: 'theme-purple', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' },
+        { name: 'dark', class: 'theme-dark', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' }
     ];
 
     const currentIndex = themes.findIndex(theme => theme.name === currentTheme);
@@ -17,10 +19,18 @@ function toggleTheme() {
 
     currentTheme = nextTheme.name;
     body.className = nextTheme.class;
-    
+
     buttons.forEach(button => {
         button.style.borderColor = nextTheme.buttonColor;
         button.style.color = nextTheme.buttonColor;
+    });
+    
+    menuBtnSpans.forEach(span => {
+        span.style.backgroundColor = nextTheme.menuBtnColor;
+    });
+    
+    navLinks.forEach(link => {
+        link.style.color = nextTheme.navLinkColor;
     });
 }
 
