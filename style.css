@@ -78,6 +78,8 @@ nav ul li a {
     width: 30px;
     height: 20px;
     cursor: pointer;
+    position: relative;
+    right: 2.5%;
 }
 
 .menu-btn span {
