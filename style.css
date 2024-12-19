@@ -36,10 +36,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     position: sticky;
     top: 0;
-
+   
 }
 
 .logo img {
@@ -121,7 +120,7 @@ nav ul li a {
 }
 
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
     padding: 10px;
 }
@@ -135,16 +134,20 @@ main {
 }
 
 .hero-content {
-    padding-right: 20px;
+    padding: 0 20px;
+    background-color: rgba(246, 247, 247, 0.116);
+    /* backdrop-filter: blur(30px); */
+    border-radius: 10px;
+
 }
 
 .hero-button {
     display: inline-block;
     padding: 10px 20px;
-    margin-top: 20px;
+    margin: 20px 2px 5px 10px;
     cursor: pointer;
-    border: 2px solid;
-    border-radius: 10px;
+    border: 1.5px solid;
+    border-radius: 7px;
     background-color: transparent;
     transition: all 0.3s ease;
 }
@@ -166,7 +169,34 @@ h1,
 h2 {
     margin-bottom: 10px;
 }
-.card-list .card-item { 
+
+.products-card-list .products-card-item {
+    margin: 10px;
+    color: rgb(69, 248, 150);
+    width: 200px;
+    padding: 30px;
+    border: .5px solid gold;
+    border-radius: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(30px);
+    background-color: rgba(244, 243, 243, 0.14);
+}
+
+.products-card-list .products-card-item .product-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.products-card-list .products-card-item p {
+    color: aqua;
+}
+.card-list .card-item {
     margin: 10px;
     color: whitesmoke;
     width: 300px;
@@ -177,10 +207,10 @@ h2 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    backdrop-filter: blur(30);
-    background-color: #f4f3f324;
-
+    backdrop-filter: blur(30px);
+    background-color: rgba(244, 243, 243, 0.14);
 }
+
 .card-list .card-item .members-image {
     width: 200px;
     height: 200px;
@@ -188,7 +218,6 @@ h2 {
     border: 1px solid black;
     margin-bottom: 30px;
     padding: 5px;
-
 }
 
 .card-list .card-item p {
