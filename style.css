@@ -166,6 +166,36 @@ h1,
 h2 {
     margin-bottom: 10px;
 }
+.card-list .card-item { 
+    margin: 10px;
+    color: whitesmoke;
+    width: 300px;
+    padding: 30px;
+    border: .5px solid gold;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(30);
+    background-color: #f4f3f324;
+
+}
+.card-list .card-item .members-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-bottom: 30px;
+    padding: 5px;
+
+}
+
+.card-list .card-item p {
+    color: aqua;
+    margin: 14px 0 40px;
+}
+
 
 footer {
     margin: 0;
