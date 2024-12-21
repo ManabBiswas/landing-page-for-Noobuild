@@ -2,7 +2,7 @@ let currentTheme = 'default';
 
 function toggleTheme() {
     const body = document.body;
-    const buttons = document.querySelectorAll('.theme-btn button, .menu-btn button');
+    const buttons = document.querySelectorAll('.theme-btn button, .menu-btn button, .hero-button ');
     const menuBtnSpans = document.querySelectorAll('.menu-btn span');
     const logo = document.getElementById('logo');
     const navLinks = document.querySelectorAll('nav ul li a');
