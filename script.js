@@ -6,12 +6,13 @@ function toggleTheme() {
     const menuBtnSpans = document.querySelectorAll('.menu-btn span');
     const logo = document.getElementById('logo');
     const navLinks = document.querySelectorAll('nav ul li a');
+    const header = document.querySelector('header');
 
     const themes = [
-        { name: 'default', class: 'theme-default', buttonColor: 'black', menuBtnColor: 'black', navLinkColor: 'black' },
-        { name: 'blue', class: 'theme-blue', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' },
-        { name: 'purple', class: 'theme-purple', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' },
-        { name: 'dark', class: 'theme-dark', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' }
+        { name: 'default', class: 'theme-default', buttonColor: 'black', menuBtnColor: 'black', navLinkColor: 'black',headerBgColor:'whitesmoke' },
+        { name: 'blue', class: 'theme-blue', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white',headerBgColor:'#1474b4' },
+        { name: 'purple', class: 'theme-purple', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white',headerBgColor:'#e9196f' },
+        { name: 'dark', class: 'theme-dark', buttonColor: 'white', menuBtnColor: 'white', navLinkColor: 'white' ,headerBgColor:'goldenrod'}
     ];
 
     const currentIndex = themes.findIndex(theme => theme.name === currentTheme);
@@ -33,6 +34,8 @@ function toggleTheme() {
     navLinks.forEach(link => {
         link.style.color = nextTheme.navLinkColor;
     });
+    
+    header.style.backgroundColor = nextTheme.headerBgColor; // Corrected reference to header background color
 
     // Update logo based on current theme
     if (currentTheme !=="dark") {
